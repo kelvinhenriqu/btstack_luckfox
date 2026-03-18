@@ -94,13 +94,14 @@ int btstack_main(int argc, const char * argv[]);
 static void local_version_information_handler(uint8_t * packet);
 
 static hci_transport_config_uart_t config = {
-    .type = HCI_TRANSPORT_CONFIG_UART,
-    .device_name = "/dev/ttyACM0",
-    .baudrate_init = 115200,
+    .type          = HCI_TRANSPORT_CONFIG_UART,
+    .device_name   = "/dev/ttyS1",
+    .baudrate_init = 1500000,
     .baudrate_main = 0,
-    .flowcontrol = BTSTACK_UART_FLOWCONTROL_ON,
-    .parity = BTSTACK_UART_PARITY_OFF,
+    .flowcontrol   = BTSTACK_UART_FLOWCONTROL_ON,
+    .parity        = BTSTACK_UART_PARITY_OFF,
 };
+
 
 static btstack_packet_callback_registration_t hci_event_callback_registration;
 
