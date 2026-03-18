@@ -551,8 +551,8 @@ mesh_node_demo:${CORE_OBJ} ${COMMON_OBJ} ${MESH_OBJ} ${ATT_OBJ} ${GATT_SERVER_OB
 	${CC} $^ ${LDFLAGS} -o $@
 
 panu_server_voyager: ${CORE_OBJ} ${COMMON_OBJ} ${CLASSIC_OBJ} ${SDP_CLIENT} ${PAN_OBJ} btstack_network_posix.o panu_server_voyager.c
-        ${CC} $^ ${CFLAGS} ${LDFLAGS} -o $@
-        ${CC} $^ ${CFLAGS} ${LDFLAGS} -o $@
+    ${CC} $^ ${CFLAGS} ${LDFLAGS} -o $@
+    ${CC} $^ ${CFLAGS} ${LDFLAGS} -o $@
 
 clean:
 	rm -f ${EXAMPLES} ${EXAMPLES_GATT_H_FILES}
